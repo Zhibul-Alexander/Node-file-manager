@@ -1,4 +1,4 @@
-const COMMANDS = {
+export const COMMANDS = {
     close: '.exit',
     up: 'up',
     cd: 'cd',
@@ -15,14 +15,14 @@ const COMMANDS = {
     unzip: 'decompress',
 }
 
-const RESPONSES = {
+export const RESPONSES = {
     startFileManager: 'Welcome to the File Manager',
     finishFileManagerFirstPart: 'Thank you for using File Manager',
-    finishFileManagerSecondPart: 'goodbye!',
+    finishFileManagerSecondPart: 'goodbye',
     currentPath: 'You are currently in',
 }
 
-const REJECTS = {
+export const REJECTS = {
     invalidInput: 'Invalid input',
     operationFailed: 'Operation failed',
 }
