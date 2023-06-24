@@ -1,0 +1,20 @@
+{
+  "name": "node-file-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhibul-Alexander/Node-file-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zhibul-Alexander/Node-file-manager/issues"
+  },
+  "homepage": "https://github.com/Zhibul-Alexander/Node-file-manager#readme"
+}
