@@ -10,6 +10,7 @@ import {add} from './commands/add.js';
 import {rn} from './commands/rn.js';
 import {cp} from './commands/cp.js';
 import {rm} from './commands/rm.js';
+import {osCommands} from './commands/os.js'
 
 import {COMMANDS, REJECTS, RESPONSES} from './constants.js';
 
@@ -79,6 +80,14 @@ export const runFileManager =  async (command, args) => {
             case COMMANDS.rm:
                 if (args.length === 1) {
                     await rm(args[0]);
+                    showCurrentDirectory();
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
+                break;
+            case COMMANDS.os:
+                if (args.length === 1) {
+                    osCommands(args[0])
                     showCurrentDirectory();
                 } else {
                     showMessage(REJECTS.invalidInput)

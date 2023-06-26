@@ -15,6 +15,21 @@ export const COMMANDS = {
     unzip: 'decompress',
 }
 
+export const OS_COMMANDS = {
+    eol: '--EOL',
+    cpus: '--cpus',
+    homedir: '--homedir',
+    username: '--username',
+    architecture: '--architecture',
+}
+
+export const OS_TEXT = {
+    eol: 'End-of-line:',
+    homedir: 'Home directory:',
+    username: 'System username:',
+    architecture: 'Architecture:',
+}
+
 export const RESPONSES = {
     startFileManager: 'Welcome to the File Manager',
     finishFileManagerFirstPart: 'Thank you for using File Manager',
