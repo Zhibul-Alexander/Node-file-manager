@@ -26,5 +26,6 @@ export const REJECTS = {
     invalidInput: 'Invalid input',
     operationFailed: 'Operation failed',
     directoryDoesNotExist: 'Directory does not exist',
-    invalidDirectory: 'An error occurred while changing the directory'
+    invalidDirectory: 'An error occurred while changing the directory',
+    errorReadingFile: 'Error reading file:',
 }

@@ -5,6 +5,7 @@ import {showCurrentDirectory} from './utils/show/showInformation.js';
 import {changeDirectory} from './commands/directory.js';
 
 import {ls} from './commands/ls.js';
+import {cat} from './commands/cat.js';
 
 import {COMMANDS, REJECTS, RESPONSES} from './constants.js';
 
@@ -30,6 +31,14 @@ export const runFileManager =  async (command, args) => {
             case COMMANDS.ls:
                 await ls(process.env.CURRENT_DIRECTORY)
                 showCurrentDirectory();
+                break;
+            case COMMANDS.cat:
+                if (args.length === 1) {
+                    await cat(args[0]);
+                    showCurrentDirectory();
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
                 break;
             default:
                 showMessage(REJECTS.invalidInput)

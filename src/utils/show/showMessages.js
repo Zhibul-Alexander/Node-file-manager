@@ -5,6 +5,6 @@ export const showMessage = (text) => {
 }
 
 export const showError = (error) => {
-    showMessage(error ? error : REJECTS.operationFailed  + '\n' )
+    showMessage((error ? error : REJECTS.operationFailed)  + '\n' )
 }
 
