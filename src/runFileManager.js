@@ -6,6 +6,10 @@ import {changeDirectory} from './commands/directory.js';
 
 import {ls} from './commands/ls.js';
 import {cat} from './commands/cat.js';
+import {add} from './commands/add.js';
+import {rn} from './commands/rn.js';
+import {cp} from './commands/cp.js';
+import {rm} from './commands/rm.js';
 
 import {COMMANDS, REJECTS, RESPONSES} from './constants.js';
 
@@ -35,6 +39,46 @@ export const runFileManager =  async (command, args) => {
             case COMMANDS.cat:
                 if (args.length === 1) {
                     await cat(args[0]);
+                    showCurrentDirectory();
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
+                break;
+            case COMMANDS.add:
+                if (args.length === 1) {
+                    await add(args[0]);
+                    showCurrentDirectory();
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
+                break;
+            case COMMANDS.rn:
+                if (args.length === 2) {
+                    await rn(args[0], args[1]);
+                    showCurrentDirectory();
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
+                break;
+            case COMMANDS.cp:
+                if (args.length === 2) {
+                    await cp(args[0], args[1], false);
+                    showCurrentDirectory();
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
+                break;
+            case COMMANDS.mv:
+                if (args.length === 2) {
+                    await cp(args[0], args[1], true);
+                    showCurrentDirectory();
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
+                break;
+            case COMMANDS.rm:
+                if (args.length === 1) {
+                    await rm(args[0]);
                     showCurrentDirectory();
                 } else {
                     showMessage(REJECTS.invalidInput)

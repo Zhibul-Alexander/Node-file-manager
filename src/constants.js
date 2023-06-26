@@ -28,4 +28,7 @@ export const REJECTS = {
     directoryDoesNotExist: 'Directory does not exist',
     invalidDirectory: 'An error occurred while changing the directory',
     errorReadingFile: 'Error reading file:',
+    errorWritingFile: 'Error writing file:',
+    alreadyExists: 'File with this name already exists',
+    notAlreadyExists: 'File with this name does not exist',
 }
