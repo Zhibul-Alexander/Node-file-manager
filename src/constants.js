@@ -35,6 +35,7 @@ export const RESPONSES = {
     finishFileManagerFirstPart: 'Thank you for using File Manager',
     finishFileManagerSecondPart: 'goodbye',
     currentPath: 'You are currently in',
+    hash: 'Hash:',
 }
 
 export const REJECTS = {
