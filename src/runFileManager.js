@@ -12,6 +12,7 @@ import {cp} from './commands/cp.js';
 import {rm} from './commands/rm.js';
 import {osCommands} from './commands/os.js'
 import {hash} from './commands/hash.js';
+import {compress} from './commands/compress.js';
 
 import {COMMANDS, REJECTS, RESPONSES} from './constants.js';
 
@@ -97,6 +98,20 @@ export const runFileManager =  async (command, args) => {
             case COMMANDS.hash:
                 if (args.length === 1) {
                     await hash(args[0]);
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
+                break;
+            case COMMANDS.compress:
+                if (args.length === 2) {
+                    await compress(args[0], args[1], true)
+                } else {
+                    showMessage(REJECTS.invalidInput)
+                }
+                break;
+            case COMMANDS.decompress:
+                if (args.length === 2) {
+                    await compress(args[0], args[1], false)
                 } else {
                     showMessage(REJECTS.invalidInput)
                 }

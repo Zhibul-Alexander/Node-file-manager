@@ -11,8 +11,8 @@ export const COMMANDS = {
     rm: 'rm',
     os: 'os',
     hash: 'hash',
-    zip: 'compress',
-    unzip: 'decompress',
+    compress: 'compress',
+    decompress: 'decompress',
 }
 
 export const OS_COMMANDS = {
@@ -36,6 +36,8 @@ export const RESPONSES = {
     finishFileManagerSecondPart: 'goodbye',
     currentPath: 'You are currently in',
     hash: 'Hash:',
+    successCompress: 'Compress completed successfully',
+    successDecompress: 'Decompress completed successfully',
 }
 
 export const REJECTS = {
