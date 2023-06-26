@@ -25,4 +25,6 @@ export const RESPONSES = {
 export const REJECTS = {
     invalidInput: 'Invalid input',
     operationFailed: 'Operation failed',
+    directoryDoesNotExist: 'Directory does not exist',
+    invalidDirectory: 'An error occurred while changing the directory'
 }

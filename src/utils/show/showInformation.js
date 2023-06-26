@@ -1,10 +1,6 @@
 import {homedir} from 'os';
-
-import {RESPONSES, REJECTS} from '../constants.js'
-
-export const showMessage = (text) => {
-    process.stdout.write(text + '\n');
-}
+import {RESPONSES} from '../../constants.js';
+import {showMessage} from './showMessages.js';
 
 export const showCurrentDirectory = () => {
     if (!process.env.CURRENT_DIRECTORY) {
@@ -12,8 +8,3 @@ export const showCurrentDirectory = () => {
     }
     showMessage(`${RESPONSES.currentPath} ${process.env.CURRENT_DIRECTORY}`);
 }
-
-export const showError = (error) => {
-    showMessage(error ? error : REJECTS.operationFailed  + '\n' )
-}
-

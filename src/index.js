@@ -1,6 +1,7 @@
-import {start} from './start/start.js';
-import {showCurrentDirectory, showMessage} from './utils/show.js';
+import {start} from './utils/start.js';
 import {runFileManager} from './runFileManager.js';
+import {showMessage} from './utils/show/showMessages.js';
+import {showCurrentDirectory} from './utils/show/showInformation.js';
 
 import {RESPONSES} from './constants.js';
 
@@ -9,7 +10,6 @@ const App = async () => {
     showCurrentDirectory()
 
     process.stdin.on('data', async (data) => {
-        showCurrentDirectory();
         const [command, ...args] = data.toString().trim().split(' ');
         await runFileManager(command, args);
     })
